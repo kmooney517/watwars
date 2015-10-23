@@ -2,16 +2,17 @@
 @import "font-awesome";
 
 
-.selected {
-	border: 3px solid red;
-
-}
 
 .container{
 	background-color: #ECB523;
 	font-family: 'Candal', sans-serif;
 	margin-top: 0;
 	width: 100%;
+}
+
+/**********************Select Character content Styling ******************/
+.selected {
+	border: 3px solid red;
 }
 
 .mainScreen {
@@ -65,3 +66,121 @@
 		padding-top: 20px;
 	}
 }
+
+/*****************************Battle Screen Styling **************************/
+.battleScreen{
+	width: 100%;
+	height: 700px;
+	background-color: #263238;
+}
+
+.header div{
+	display: inline-block;
+	p{
+		padding: 2px 0 0 5px;
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+}
+
+.playerOneHealth{
+	border: 1px solid red;
+	width: 20%;
+	height: 50px;
+	margin-left: 2%;
+	margin-bottom: 10px;
+	.healthBar{
+		margin-left: 5px;
+		height: 15px;
+		width: 95%;
+		border: 1px solid red;
+		background-color: green;
+	}
+}
+
+.centerLogo{
+	border: 1px solid red;
+	width: 25%;
+	height: 100px;
+	margin: 10px 15%;
+}
+
+.playerTwoHealth{
+	border: 1px solid red;
+	width: 20%;
+	height: 50px;
+	margin-bottom: 10px;
+	p{
+		margin-left: 135px;
+	}
+	.healthBar{
+		margin-left: 5px;
+		height: 15px;
+		width: 95%;
+		border: 1px solid red;
+		background-color: green;
+	}
+}
+
+.leftSide{
+	width: 25%;
+	height: 500px;
+	border: 1px solid red;
+	float: left;
+	.playerOne{
+		width: 95%;
+		height: 300px;
+		border: 1px solid blue;
+		margin: 5px;
+	}
+}
+
+.rightSide{
+	width: 25%;
+	height: 500px;
+	border: 1px solid red;
+	float: right;
+	.playerTwo{
+		width: 95%;
+		height: 300px;
+		border: 1px solid blue;
+		margin: 5px;
+	}
+}
+
+.attackOptions {
+	width: 95%;
+	height: 175px;
+	border: 1px solid blue;
+	margin: 5px;
+	button{
+		margin: 25px 27px;
+	}
+		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,8 +15,69 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
+// Adding Border around selected characters
 (0, _jquery2['default'])('.bio').on('click', function () {
 	(0, _jquery2['default'])(this).removeClass('border').addClass('selected');
+});
+
+// Constructor Function for all Fighters
+var Fighter = function Fighter() {};
+
+// Instances created for each fighter
+var watMan = new Fighter({
+	attack1: 'wat',
+	attack2: 'watEr',
+	attack3: 'batarang',
+	attack4: 'sWat'
+});
+
+var tRex = new Fighter({
+	attack1: 'meow',
+	attack2: 'paint',
+	attack3: 'scratchNose',
+	attack4: 'hug'
+});
+
+var bobRoss = new Fighter({
+	attack1: 'paintTree',
+	attack2: 'paintCloud',
+	attack3: 'smile',
+	attack4: 'sing'
+});
+
+var potatoVader = new Fighter({
+	attack1: 'useForce',
+	attack2: 'electrocute',
+	attack3: 'useMoreForce',
+	attack4: 'timsChoice	'
+});
+
+var captainPlanet = new Fighter({
+	attack1: 'water',
+	attack2: 'earth',
+	attack3: 'fire',
+	attack4: 'wind'
+});
+
+var nemoFish = new Fighter({
+	attack1: 'fin',
+	attack2: 'bubbles',
+	attack3: 'getLost',
+	attack4: 'swim'
+});
+
+var johnnyBravo = new Fighter({
+	attack1: 'hairGel',
+	attack2: 'pumpIron',
+	attack3: 'comb',
+	attack4: 'tinyLegs'
+});
+
+var barneyStinson = new Fighter({
+	attack1: 'legenDary',
+	attack2: 'suitUp',
+	attack3: 'suitUp',
+	attack4: 'suitUp'
 });
 
 },{"jquery":2,"moment":3,"underscore":4}],2:[function(require,module,exports){
