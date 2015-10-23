@@ -2026,7 +2026,7 @@
 
 /**********************Select Character content Styling ******************/
 .selected {
-  border: 3px solid red; }
+  border: 5px solid #1A3578; }
 
 .mainScreen .upperPart {
   height: 500px; }
@@ -2036,42 +2036,49 @@
   font-size: 200px; }
 
 .mainScreen .bios {
-  max-width: 100%; }
+  width: 100%; }
   .mainScreen .bios div {
+    display: inline-block; }
+  .mainScreen .bios .GG {
+    border-right: 1px solid black;
+    text-align: center; }
+    .mainScreen .bios .GG p {
+      font-size: 30px; }
+  .mainScreen .bios .BG {
+    text-align: center;
+    font-size: 25px; }
+  .mainScreen .bios div div {
+    width: 100%;
     display: inline-block;
     width: 97px;
     height: 130px;
     background-color: white;
     border-radius: 3px;
-    margin: 2% 2%;
-    text-align: center;
-    line-height: 30px;
-    color: #1A3578; }
+    margin: 1% 25px;
+    color: black; }
+    .mainScreen .bios div div:hover {
+      border-bottom: 5px solid #1A3578; }
 
 .mainScreen .border {
   border: 1px solid black; }
 
-.mainScreen .names {
-  max-width: 100%; }
-  .mainScreen .names div {
-    display: inline-block;
-    width: 97px;
-    height: 30px;
-    margin: 2% 2.1%;
-    text-align: center;
-    color: black;
-    margin-top: 0; }
-
 .mainScreen .lowerPart {
-  height: 150px;
+  height: 80px;
   background-color: #B88C16;
   margin-bottom: 0;
-  font-size: 75px;
+  margin-top: 30px;
+  font-size: 40px;
   text-align: center;
   padding-top: 20px; }
 
+.mainScreen .fight {
+  margin: 10px 45%;
+  height: 50px;
+  width: 200px; }
+
 /*****************************Battle Screen Styling **************************/
 .battleScreen {
+  display: none;
   width: 100%;
   height: 700px;
   background-color: #263238; }
@@ -2100,7 +2107,10 @@
   border: 1px solid red;
   width: 25%;
   height: 100px;
-  margin: 10px 15%; }
+  margin: 10px 15%;
+  background-image: url(../images/centerLogo.png);
+  background-repeat: no repeat;
+  background-size: 100% 100%; }
 
 .playerTwoHealth {
   border: 1px solid red;
@@ -2108,7 +2118,7 @@
   height: 50px;
   margin-bottom: 10px; }
   .playerTwoHealth p {
-    margin-left: 135px; }
+    margin-left: 70px; }
   .playerTwoHealth .healthBar {
     margin-left: 5px;
     height: 15px;
@@ -2124,7 +2134,7 @@
   .leftSide .playerOne {
     width: 95%;
     height: 300px;
-    border: 1px solid blue;
+    border: 1px solid #ECB523;
     margin: 5px; }
 
 .rightSide {
@@ -2135,15 +2145,16 @@
   .rightSide .playerTwo {
     width: 95%;
     height: 300px;
-    border: 1px solid blue;
+    border: 1px solid #ECB523;
     margin: 5px; }
 
 .attackOptions {
   width: 95%;
   height: 175px;
-  border: 1px solid blue;
+  border: 1px solid #ECB523;
   margin: 5px; }
   .attackOptions button {
-    margin: 25px 27px; }
+    margin: 25px 10px;
+    width: 120px; }
 
 /*# sourceMappingURL=main.css.map */

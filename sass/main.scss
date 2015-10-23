@@ -12,8 +12,9 @@
 
 /**********************Select Character content Styling ******************/
 .selected {
-	border: 3px solid red;
+	border: 5px solid #1A3578;
 }
+
 
 .mainScreen {
 	.upperPart{
@@ -22,21 +23,40 @@
 
 	.title{
 		text-align: center;
-		font-size: 200px;
+		font-size: 200px;;
 	}
 
 	.bios {
-		max-width: 100%;
+		width: 100%;
 		div{
+			display: inline-block;
+		}
+		.GG{
+			border-right: 1px solid black;
+			text-align: center;
+			p{
+				font-size: 30px;		
+			}
+		}
+		.BG{
+			text-align: center;
+			font-size: 25px;
+		}
+		.vader{
+
+		}
+		div div{
+			width: 100%;
 			display: inline-block;
 			width: 97px;
 			height: 130px;
 			background-color: white;
 			border-radius: 3px;
-			margin: 2% 2%;
-			text-align: center;
-			line-height: 30px;
-			color: #1A3578;
+			margin:1% 25px;
+			color: black;
+			&:hover{
+				border-bottom: 5px solid #1A3578;
+			}
 		}
 	}
 
@@ -44,31 +64,26 @@
 		border: 1px solid black;
 	}
 
-	.names{
-		max-width: 100%;
-		div{
-			display: inline-block;
-			width: 97px;
-			height: 30px;
-			margin: 2% 2.1%;
-			text-align: center;
-			color: black;
-			margin-top: 0;
-		}
-	}
-
 	.lowerPart{
-		height: 150px;
+		height: 80px;
 		background-color: #B88C16;
 		margin-bottom: 0;
-		font-size: 75px;
+		margin-top: 30px;
+		font-size: 40px;
 		text-align: center;
 		padding-top: 20px;
+	}
+
+	.fight{
+		margin: 10px 45%;
+		height: 50px;
+		width: 200px;
 	}
 }
 
 /*****************************Battle Screen Styling **************************/
 .battleScreen{
+	display: none;
 	width: 100%;
 	height: 700px;
 	background-color: #263238;
@@ -104,6 +119,9 @@
 	width: 25%;
 	height: 100px;
 	margin: 10px 15%;
+	background-image: url(../images/centerLogo.png);
+	background-repeat: no repeat;
+	background-size: 100% 100%;
 }
 
 .playerTwoHealth{
@@ -112,7 +130,7 @@
 	height: 50px;
 	margin-bottom: 10px;
 	p{
-		margin-left: 135px;
+		margin-left: 70px;
 	}
 	.healthBar{
 		margin-left: 5px;
@@ -131,7 +149,7 @@
 	.playerOne{
 		width: 95%;
 		height: 300px;
-		border: 1px solid blue;
+		border: 1px solid #ECB523;
 		margin: 5px;
 	}
 }
@@ -144,7 +162,7 @@
 	.playerTwo{
 		width: 95%;
 		height: 300px;
-		border: 1px solid blue;
+		border: 1px solid #ECB523;
 		margin: 5px;
 	}
 }
@@ -152,10 +170,11 @@
 .attackOptions {
 	width: 95%;
 	height: 175px;
-	border: 1px solid blue;
+	border: 1px solid #ECB523;
 	margin: 5px;
 	button{
-		margin: 25px 27px;
+		margin: 25px 10px;
+		width: 120px;
 	}
 		
 }

@@ -15,70 +15,232 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
-// Adding Border around selected characters
-(0, _jquery2['default'])('.bio').on('click', function () {
-	(0, _jquery2['default'])(this).removeClass('border').addClass('selected');
-});
-
 // Constructor Function for all Fighters
-var Fighter = function Fighter() {};
+var RepublicFighter = function RepublicFighter(obj) {
+	this.name = 'republicName';
+	this.health = 100;
+	this.attack1 = obj.attack1;
+	this.attack2 = obj.attack2;
+	this.attack3 = obj.attack3;
+	this.attack4 = obj.attack4;
+};
 
-// Instances created for each fighter
-var watMan = new Fighter({
+// Instances created for each republic fighter
+var watMan = new RepublicFighter({
 	attack1: 'wat',
 	attack2: 'watEr',
 	attack3: 'batarang',
 	attack4: 'sWat'
 });
 
-var tRex = new Fighter({
+var tRex = new RepublicFighter({
 	attack1: 'meow',
 	attack2: 'paint',
 	attack3: 'scratchNose',
 	attack4: 'hug'
 });
 
-var bobRoss = new Fighter({
+var bobRoss = new RepublicFighter({
 	attack1: 'paintTree',
 	attack2: 'paintCloud',
 	attack3: 'smile',
 	attack4: 'sing'
 });
 
-var potatoVader = new Fighter({
+var potatoVader = new RepublicFighter({
 	attack1: 'useForce',
 	attack2: 'electrocute',
-	attack3: 'useMoreForce',
-	attack4: 'timsChoice	'
+	attack3: 'choke',
+	attack4: 'frenchFry'
 });
 
-var captainPlanet = new Fighter({
+var EmpireFighter = function EmpireFighter(obj) {
+	this.name = 'empire name';
+	this.health = 80;
+	this.attack1 = obj.attack1;
+	this.attack2 = obj.attack2;
+	this.attack3 = obj.attack3;
+	this.attack4 = obj.attack4;
+};
+
+var captainPlanet = new EmpireFighter({
 	attack1: 'water',
 	attack2: 'earth',
 	attack3: 'fire',
 	attack4: 'wind'
 });
 
-var nemoFish = new Fighter({
+var nemoFish = new EmpireFighter({
 	attack1: 'fin',
 	attack2: 'bubbles',
 	attack3: 'getLost',
 	attack4: 'swim'
 });
 
-var johnnyBravo = new Fighter({
+var johnnyBravo = new EmpireFighter({
 	attack1: 'hairGel',
-	attack2: 'pumpIron',
+	attack2: 'monkey',
 	attack3: 'comb',
 	attack4: 'tinyLegs'
 });
 
-var barneyStinson = new Fighter({
+var barneyStinson = new EmpireFighter({
 	attack1: 'legenDary',
 	attack2: 'suitUp',
 	attack3: 'suitUp',
 	attack4: 'suitUp'
 });
+
+// Wat Man
+(0, _jquery2['default'])('.watMan').on('click', function () {
+	(0, _jquery2['default'])('.watMan').removeClass('border').addClass('selected');
+	(0, _jquery2['default'])('.tRex').removeClass('selected');
+	(0, _jquery2['default'])('.bobRoss').removeClass('selected');
+	(0, _jquery2['default'])('.vader').removeClass('selected');
+});
+
+(0, _jquery2['default'])('.watMan').on('click', function () {
+	(0, _jquery2['default'])('.republicName').html('Wat Man');
+	(0, _jquery2['default'])('.playerOne').html('<img src="images/watman.jpg" width="100%" height="100%">');
+	(0, _jquery2['default'])('.goodAtck1').html('wat');
+	(0, _jquery2['default'])('.goodAtck2').html('watEr');
+	(0, _jquery2['default'])('.goodAtck3').html('baterang');
+	(0, _jquery2['default'])('.goodAtck4').html('sWat');
+});
+
+// T Rex
+(0, _jquery2['default'])('.tRex').on('click', function () {
+	(0, _jquery2['default'])('.tRex').removeClass('border').addClass('selected');
+	(0, _jquery2['default'])('.watMan').removeClass('selected');
+	(0, _jquery2['default'])('.bobRoss').removeClass('selected');
+	(0, _jquery2['default'])('.vader').removeClass('selected');
+});
+
+(0, _jquery2['default'])('.tRex').on('click', function () {
+	(0, _jquery2['default'])('.republicName').html('T-Rex');
+	(0, _jquery2['default'])('.playerOne').html('<img src="images/trex.png" height="100%" width="100%">');
+	(0, _jquery2['default'])('.goodAtck1').html('meow');
+	(0, _jquery2['default'])('.goodAtck2').html('paint');
+	(0, _jquery2['default'])('.goodAtck3').html('scratchNose');
+	(0, _jquery2['default'])('.goodAtck4').html('hug');
+});
+
+//Bob Ross
+(0, _jquery2['default'])('.bobRoss').on('click', function () {
+	(0, _jquery2['default'])('.bobRoss').removeClass('border').addClass('selected');
+	(0, _jquery2['default'])('.tRex').removeClass('selected');
+	(0, _jquery2['default'])('.watMan').removeClass('selected');
+	(0, _jquery2['default'])('.vader').removeClass('selected');
+});
+
+(0, _jquery2['default'])('.bobRoss').on('click', function () {
+	(0, _jquery2['default'])('.republicName').html('Bob Ross');
+	(0, _jquery2['default'])('.playerOne').html('<img src="images/bobRoss.png" height="100%" width="100%">');
+	(0, _jquery2['default'])('.goodAtck1').html('paintTree');
+	(0, _jquery2['default'])('.goodAtck2').html('paintCloud');
+	(0, _jquery2['default'])('.goodAtck3').html('sing');
+	(0, _jquery2['default'])('.goodAtck4').html('smile');
+});
+
+//Vader
+(0, _jquery2['default'])('.vader').on('click', function () {
+	(0, _jquery2['default'])('.vader').removeClass('border').addClass('selected');
+	(0, _jquery2['default'])('.tRex').removeClass('selected');
+	(0, _jquery2['default'])('.bobRoss').removeClass('selected');
+	(0, _jquery2['default'])('.watMan').removeClass('selected');
+});
+
+(0, _jquery2['default'])('.vader').on('click', function () {
+	(0, _jquery2['default'])('.republicName').html('Potato Vader');
+	(0, _jquery2['default'])('.playerOne').html('<img src="images/vader.jpg" height="100%" width="100%">');
+	(0, _jquery2['default'])('.goodAtck1').html('useForce');
+	(0, _jquery2['default'])('.goodAtck2').html('electrocute');
+	(0, _jquery2['default'])('.goodAtck3').html('choke');
+	(0, _jquery2['default'])('.goodAtck4').html('frenchFry');
+});
+
+// Captain Planet
+(0, _jquery2['default'])('.captainPlanet').on('click', function () {
+	(0, _jquery2['default'])('.captainPlanet').removeClass('border').addClass('selected');
+	(0, _jquery2['default'])('.nemo').removeClass('selected');
+	(0, _jquery2['default'])('.johnny').removeClass('selected');
+	(0, _jquery2['default'])('.barneyStinson').removeClass('selected');
+});
+
+(0, _jquery2['default'])('.captainPlanet').on('click', function () {
+	(0, _jquery2['default'])('.empireName').html('Captain Planet');
+	(0, _jquery2['default'])('.playerTwo').html('<img src="images/Captain_Planet.jpg" height="100%" width="100%">');
+	(0, _jquery2['default'])('.badAtck1').html('water');
+	(0, _jquery2['default'])('.badAtck2').html('earth');
+	(0, _jquery2['default'])('.badAtck3').html('wind');
+	(0, _jquery2['default'])('.badAtck4').html('fire');
+});
+
+// Nemo
+(0, _jquery2['default'])('.nemo').on('click', function () {
+	(0, _jquery2['default'])('.nemo').removeClass('border').addClass('selected');
+	(0, _jquery2['default'])('.captainPlanet').removeClass('selected');
+	(0, _jquery2['default'])('.johnny').removeClass('selected');
+	(0, _jquery2['default'])('.barneyStinson').removeClass('selected');
+});
+
+(0, _jquery2['default'])('.nemo').on('click', function () {
+	(0, _jquery2['default'])('.empireName').html('Find yoself, Nemo');
+	(0, _jquery2['default'])('.playerTwo').html('<img src="images/Nemo.png" height="100%" width="100%">');
+	(0, _jquery2['default'])('.badAtck1').html('fin');
+	(0, _jquery2['default'])('.badAtck2').html('bubbles');
+	(0, _jquery2['default'])('.badAtck3').html('getLost');
+	(0, _jquery2['default'])('.badAtck4').html('swim');
+});
+
+// Johnny Bravo
+(0, _jquery2['default'])('.johnny').on('click', function () {
+	(0, _jquery2['default'])('.johnny').removeClass('border').addClass('selected');
+	(0, _jquery2['default'])('.nemo').removeClass('selected');
+	(0, _jquery2['default'])('.captainPlanet').removeClass('selected');
+	(0, _jquery2['default'])('.barneyStinson').removeClass('selected');
+});
+
+(0, _jquery2['default'])('.johnny').on('click', function () {
+	(0, _jquery2['default'])('.empireName').html('Johnny Bravo');
+	(0, _jquery2['default'])('.playerTwo').html('<img src="images/johnny-bravo.jpg" height="100%" width="100%">');
+	(0, _jquery2['default'])('.badAtck1').html('hairGel');
+	(0, _jquery2['default'])('.badAtck2').html('monkey');
+	(0, _jquery2['default'])('.badAtck3').html('comb');
+	(0, _jquery2['default'])('.badAtck4').html('tinyLegs');
+});
+
+//Barney Stinson
+(0, _jquery2['default'])('.barneyStinson').on('click', function () {
+	(0, _jquery2['default'])('.barneyStinson').removeClass('border').addClass('selected');
+	(0, _jquery2['default'])('.nemo').removeClass('selected');
+	(0, _jquery2['default'])('.johnny').removeClass('selected');
+	(0, _jquery2['default'])('.captainPlanet').removeClass('selected');
+});
+
+(0, _jquery2['default'])('.barneyStinson').on('click', function () {
+	(0, _jquery2['default'])('.empireName').html('Barney Stinson');
+	(0, _jquery2['default'])('.playerTwo').html('<img src="images/Barney_Stinson.jpg" height="100%" width="100%">');
+	(0, _jquery2['default'])('.badAtck1').html('legenDary');
+	(0, _jquery2['default'])('.badAtck2').html('suitUp');
+	(0, _jquery2['default'])('.badAtck3').html('suitUp');
+	(0, _jquery2['default'])('.badAtck4').html('suitUp');
+});
+
+// Alert the user if not enough characters selected - then fade to battle screen
+
+(0, _jquery2['default'])('.fight').on('click', function (event) {
+	(0, _jquery2['default'])('.mainScreen').fadeOut(300);
+	(0, _jquery2['default'])('.battleScreen').fadeIn(1500);
+});
+
+// Attack Attributes need to populate the buttons when specific character is selected
+
+var abilities = function abilities() {};
+
+// when fight button is clicked then intro box fades out, and battle screen fades in
+
+// Fighting stuffs
 
 },{"jquery":2,"moment":3,"underscore":4}],2:[function(require,module,exports){
 /*!
