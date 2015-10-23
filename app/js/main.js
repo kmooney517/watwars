@@ -1,4 +1,23 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var EmpireFighter = function EmpireFighter(obj) {
+
+	this.health = 100;
+
+	this.hit = function (num) {
+		var hitPoints = num || 10;
+		return this.health = this.health - hitPoints;
+	};
+};
+
+exports["default"] = EmpireFighter;
+module.exports = exports["default"];
+
+},{}],2:[function(require,module,exports){
 'use strict';
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -15,81 +34,157 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
-// Constructor Function for all Fighters
-var RepublicFighter = function RepublicFighter(obj) {
-	this.name = 'republicName';
-	this.health = 100;
-	this.attack1 = obj.attack1;
-	this.attack2 = obj.attack2;
-	this.attack3 = obj.attack3;
-	this.attack4 = obj.attack4;
-};
+var _republicJs = require('./republic.js');
 
-// Instances created for each republic fighter
-var watMan = new RepublicFighter({
-	attack1: 'wat',
-	attack2: 'watEr',
-	attack3: 'batarang',
-	attack4: 'sWat'
+var _republicJs2 = _interopRequireDefault(_republicJs);
+
+var _empireJs = require('./empire.js');
+
+var _empireJs2 = _interopRequireDefault(_empireJs);
+
+// Combat Sequence --------------------------------------------------------
+
+//RepublicFighter Instance
+var watMan = new _republicJs2['default']();
+// let tRex = new RepublicFighter();
+// let bobRoss = new RepublicFighter();
+// let potatoVader= new RepublicFighter();
+
+//EmpireFighter Instance
+var captainPlanet = new _empireJs2['default']();
+// let nemoFish = new EmpireFighter();
+// let johnnyBravo = new EmpireFighter();
+// let barneyStinson = new EmpireFighter();
+
+//DOM Nodes Selected for health
+var repHealth = (0, _jquery2['default'])('.repHealthBar');
+var empHealth = (0, _jquery2['default'])('.empHealthBar');
+
+//DOM Nodes Selected for attacks
+
+var repAtck1 = (0, _jquery2['default'])('.goodAtck1');
+var repAtck2 = (0, _jquery2['default'])('.goodAtck2');
+var repAtck3 = (0, _jquery2['default'])('.goodAtck3');
+var repAtck4 = (0, _jquery2['default'])('.goodAtck4');
+
+var empAtck1 = (0, _jquery2['default'])('.badAtck1');
+var empAtck2 = (0, _jquery2['default'])('.badAtck2');
+var empAtck3 = (0, _jquery2['default'])('.badAtck3');
+var empAtck4 = (0, _jquery2['default'])('.badAtck4');
+
+// Show health of current player
+repHealth.text(watMan.health);
+empHealth.text(captainPlanet.health);
+
+// Setting up the click events for the attacks
+
+repAtck1.on('click', function () {
+
+	//Determining the hitpoints
+	var num = _underscore2['default'].random(9, 10);
+	captainPlanet.hit(num);
+
+	if (captainPlanet.health <= 0) {
+		empHealth.text('Defeated!');
+	} else {
+		empHealth.text(captainPlanet.health);
+	}
 });
 
-var tRex = new RepublicFighter({
-	attack1: 'meow',
-	attack2: 'paint',
-	attack3: 'scratchNose',
-	attack4: 'hug'
+repAtck2.on('click', function () {
+
+	//Determining the hitpoints
+	var num = _underscore2['default'].random(0, 20);
+	captainPlanet.hit(num);
+
+	if (captainPlanet.health <= 0) {
+		empHealth.text('Defeated!');
+	} else {
+		empHealth.text(captainPlanet.health);
+	}
 });
 
-var bobRoss = new RepublicFighter({
-	attack1: 'paintTree',
-	attack2: 'paintCloud',
-	attack3: 'smile',
-	attack4: 'sing'
+repAtck3.on('click', function () {
+
+	//Determining the hitpoints
+	var num = _underscore2['default'].random(0, 60);
+	captainPlanet.hit(num);
+
+	if (captainPlanet.health <= 0) {
+		empHealth.text('Defeated!');
+	} else {
+		empHealth.text(captainPlanet.health);
+	}
 });
 
-var potatoVader = new RepublicFighter({
-	attack1: 'useForce',
-	attack2: 'electrocute',
-	attack3: 'choke',
-	attack4: 'frenchFry'
+repAtck4.on('click', function () {
+
+	//Determining the hitpoints
+	var num = _underscore2['default'].random(0, 40);
+	captainPlanet.hit(num);
+
+	if (captainPlanet.health <= 0) {
+		empHealth.text('Defeated!');
+	} else {
+		empHealth.text(captainPlanet.health);
+	}
 });
 
-var EmpireFighter = function EmpireFighter(obj) {
-	this.name = 'empire name';
-	this.health = 80;
-	this.attack1 = obj.attack1;
-	this.attack2 = obj.attack2;
-	this.attack3 = obj.attack3;
-	this.attack4 = obj.attack4;
-};
+// ------------------------------------------------------------------
 
-var captainPlanet = new EmpireFighter({
-	attack1: 'water',
-	attack2: 'earth',
-	attack3: 'fire',
-	attack4: 'wind'
+empAtck1.on('click', function () {
+
+	//Determining the hitpoints
+	var num = _underscore2['default'].random(9, 10);
+	watMan.hit(num);
+
+	if (watMan.health <= 0) {
+		repHealth.text('Defeated!');
+	} else {
+		repHealth.text(watMan.health);
+	}
 });
 
-var nemoFish = new EmpireFighter({
-	attack1: 'fin',
-	attack2: 'bubbles',
-	attack3: 'getLost',
-	attack4: 'swim'
+empAtck2.on('click', function () {
+
+	//Determining the hitpoints
+	var num = _underscore2['default'].random(0, 20);
+	watMan.hit(num);
+
+	if (watMan.health <= 0) {
+		repHealth.text('Defeated!');
+	} else {
+		repHealth.text(watMan.health);
+	}
 });
 
-var johnnyBravo = new EmpireFighter({
-	attack1: 'hairGel',
-	attack2: 'monkey',
-	attack3: 'comb',
-	attack4: 'tinyLegs'
+empAtck3.on('click', function () {
+
+	//Determining the hitpoints
+	var num = _underscore2['default'].random(0, 60);
+	watMan.hit(num);
+
+	if (watMan.health <= 0) {
+		repHealth.text('Defeated!');
+	} else {
+		repHealth.text(watMan.health);
+	}
 });
 
-var barneyStinson = new EmpireFighter({
-	attack1: 'legenDary',
-	attack2: 'suitUp',
-	attack3: 'suitUp',
-	attack4: 'suitUp'
+empAtck4.on('click', function () {
+
+	//Determining the hitpoints
+	var num = _underscore2['default'].random(0, 40);
+	watMan.hit(num);
+
+	if (watMan.health <= 0) {
+		repHealth.text('Defeated!');
+	} else {
+		repHealth.text(watMan.health);
+	}
 });
+
+// Character Selection Process ----------------------------------------------------------------
 
 // Wat Man
 (0, _jquery2['default'])('.watMan').on('click', function () {
@@ -104,7 +199,7 @@ var barneyStinson = new EmpireFighter({
 	(0, _jquery2['default'])('.playerOne').html('<img src="images/watman.jpg" width="100%" height="100%">');
 	(0, _jquery2['default'])('.goodAtck1').html('wat');
 	(0, _jquery2['default'])('.goodAtck2').html('watEr');
-	(0, _jquery2['default'])('.goodAtck3').html('baterang');
+	(0, _jquery2['default'])('.goodAtck3').html('waterang');
 	(0, _jquery2['default'])('.goodAtck4').html('sWat');
 });
 
@@ -242,7 +337,35 @@ var abilities = function abilities() {};
 
 // Fighting stuffs
 
-},{"jquery":2,"moment":3,"underscore":4}],2:[function(require,module,exports){
+},{"./empire.js":1,"./republic.js":3,"jquery":4,"moment":5,"underscore":6}],3:[function(require,module,exports){
+// Constructor Function for all Fighters
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var RepublicFighter = function RepublicFighter(obj) {
+
+	this.health = 100;
+
+	this.hit = function (num) {
+		var hitPoints = num || 10;
+		return this.health = this.health - hitPoints;
+	};
+};
+
+exports["default"] = RepublicFighter;
+
+var watMan = function watMan() {
+	this.health = 200;
+};
+
+var potatoVader = function potatoVader() {
+	this.health = 100;
+};
+module.exports = exports["default"];
+
+},{}],4:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -9454,7 +9577,7 @@ return jQuery;
 
 }));
 
-},{}],3:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 //! moment.js
 //! version : 2.10.6
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
@@ -12650,7 +12773,7 @@ return jQuery;
     return _moment;
 
 }));
-},{}],4:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 //     Underscore.js 1.8.3
 //     http://underscorejs.org
 //     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -14200,7 +14323,7 @@ return jQuery;
   }
 }.call(this));
 
-},{}]},{},[1])
+},{}]},{},[2])
 
 
 //# sourceMappingURL=main.js.map

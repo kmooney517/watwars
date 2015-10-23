@@ -2,86 +2,177 @@ import $ from 'jquery';
 import _ from 'underscore';
 import moment from 'moment';
 
-// Constructor Function for all Fighters
-let RepublicFighter = function(obj) {
-	this.name = 'republicName';
-	this.health = 100;
-	this.attack1 = obj.attack1;
-	this.attack2 = obj.attack2;
-	this.attack3 = obj.attack3;
-	this.attack4 = obj.attack4;
-}
+import RepublicFighter from './republic.js';
+import EmpireFighter from './empire.js';
 
-// Instances created for each republic fighter
-let watMan = new RepublicFighter({
-	attack1: 'wat',
-	attack2: 'watEr',
-	attack3: 'batarang',
-	attack4: 'sWat'
-});
 
-let tRex = new RepublicFighter({
-	attack1: 'meow',
-	attack2: 'paint',
-	attack3: 'scratchNose',
-	attack4: 'hug'
-});
 
-let bobRoss = new RepublicFighter({
-	attack1: 'paintTree',
-	attack2: 'paintCloud',
-	attack3: 'smile',
-	attack4: 'sing'
+// Combat Sequence --------------------------------------------------------
+
+
+//RepublicFighter Instance
+let watMan = new RepublicFighter();
+// let tRex = new RepublicFighter();
+// let bobRoss = new RepublicFighter();
+// let potatoVader= new RepublicFighter();
+
+//EmpireFighter Instance
+let captainPlanet = new EmpireFighter();
+// let nemoFish = new EmpireFighter();
+// let johnnyBravo = new EmpireFighter();
+// let barneyStinson = new EmpireFighter();
+
+
+//DOM Nodes Selected for health
+let repHealth = $('.repHealthBar');
+let empHealth = $('.empHealthBar');
+
+
+//DOM Nodes Selected for attacks
+
+let repAtck1 = $('.goodAtck1');
+let repAtck2 = $('.goodAtck2');
+let repAtck3 = $('.goodAtck3');
+let repAtck4 = $('.goodAtck4');
+
+let empAtck1 = $('.badAtck1');
+let empAtck2 = $('.badAtck2');
+let empAtck3 = $('.badAtck3');
+let empAtck4 = $('.badAtck4');
+
+// Show health of current player
+repHealth.text(watMan.health);
+empHealth.text(captainPlanet.health);
+
+// Setting up the click events for the attacks
+
+repAtck1.on('click', function(){
+
+	//Determining the hitpoints
+	let num = _.random (9, 10);
+	captainPlanet.hit(num);
+
+	if (captainPlanet.health <= 0) {
+		empHealth.text('Defeated!');
+	} else {
+		empHealth.text(captainPlanet.health);
+	}
 })
 
-let potatoVader = new RepublicFighter({
-	attack1: 'useForce',
-	attack2: 'electrocute',
-	attack3: 'choke',
-	attack4: 'frenchFry'
+repAtck2.on('click', function(){
+
+	//Determining the hitpoints
+	let num = _.random (0, 20);
+	captainPlanet.hit(num);
+
+	if (captainPlanet.health <= 0) {
+		empHealth.text('Defeated!');
+	} else {
+		empHealth.text(captainPlanet.health);
+
+	}
 })
 
+repAtck3.on('click', function(){
 
-let EmpireFighter = function(obj) {
-	this.name = 'empire name';
-	this.health = 80;
-	this.attack1 = obj.attack1;
-	this.attack2 = obj.attack2;
-	this.attack3 = obj.attack3;
-	this.attack4 = obj.attack4;
-}
+	//Determining the hitpoints
+	let num = _.random (0, 60);
+	captainPlanet.hit(num);
 
-let captainPlanet = new EmpireFighter({
-	attack1: 'water',
-	attack2: 'earth',
-	attack3: 'fire',
-	attack4: 'wind'	
+	if (captainPlanet.health <= 0) {
+		empHealth.text('Defeated!');
+	} else {
+		empHealth.text(captainPlanet.health);
+
+	}
 })
 
-let nemoFish = new EmpireFighter({
-	attack1: 'fin',
-	attack2: 'bubbles',
-	attack3: 'getLost',
-	attack4: 'swim'
-})
+repAtck4.on('click', function(){
 
-let johnnyBravo = new EmpireFighter({
-	attack1: 'hairGel',
-	attack2: 'monkey',
-	attack3: 'comb',
-	attack4: 'tinyLegs'	
-})
+	//Determining the hitpoints
+	let num = _.random (0, 40);
+	captainPlanet.hit(num);
 
-let barneyStinson = new EmpireFighter({
-	attack1: 'legenDary',
-	attack2: 'suitUp',
-	attack3: 'suitUp',
-	attack4: 'suitUp'
+	if (captainPlanet.health <= 0) {
+		empHealth.text('Defeated!');
+	} else {
+		empHealth.text(captainPlanet.health);
+	}
 })
 
 
 
+// ------------------------------------------------------------------
 
+
+
+empAtck1.on('click', function(){
+
+	//Determining the hitpoints
+	let num = _.random (9, 10);
+	watMan.hit(num);
+
+	if (watMan.health <= 0) {
+		repHealth.text('Defeated!');
+	} else {
+		repHealth.text(watMan.health);
+	}
+})
+
+empAtck2.on('click', function(){
+
+	//Determining the hitpoints
+	let num = _.random (0, 20);
+	watMan.hit(num);
+
+	if (watMan.health <= 0) {
+		repHealth.text('Defeated!');
+	} else {
+		repHealth.text(watMan.health);
+
+	}
+})
+
+empAtck3.on('click', function(){
+
+	//Determining the hitpoints
+	let num = _.random (0, 60);
+	watMan.hit(num);
+
+	if (watMan.health <= 0) {
+		repHealth.text('Defeated!');
+	} else {
+		repHealth.text(watMan.health);
+
+	}
+})
+
+empAtck4.on('click', function(){
+
+	//Determining the hitpoints
+	let num = _.random (0, 40);
+	watMan.hit(num);
+
+	if (watMan.health <= 0) {
+		repHealth.text('Defeated!');
+	} else {
+		repHealth.text(watMan.health);
+	}
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Character Selection Process ----------------------------------------------------------------
 
 // Wat Man
 $('.watMan').on('click', function(){
@@ -96,7 +187,7 @@ $('.watMan').on('click',function(){
 	$('.playerOne').html('<img src="images/watman.jpg" width="100%" height="100%">');
 	$('.goodAtck1').html('wat');
 	$('.goodAtck2').html('watEr');
-	$('.goodAtck3').html('baterang');
+	$('.goodAtck3').html('waterang');
 	$('.goodAtck4').html('sWat');
 })
 
