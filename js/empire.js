@@ -5,6 +5,10 @@ let EmpireFighter = function(obj) {
 	this.hit = function (num) {
 		let hitPoints = num || 10;
 		return this.health = this.health - hitPoints;
+
+
+
+
 	};
 };
 

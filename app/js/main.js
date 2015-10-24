@@ -46,12 +46,15 @@ var _empireJs2 = _interopRequireDefault(_empireJs);
 
 //RepublicFighter Instance
 var watMan = new _republicJs2['default']();
+watMan.health = _underscore2['default'].random(120, 150);
 // let tRex = new RepublicFighter();
+// 	tRex.health = 250;
 // let bobRoss = new RepublicFighter();
 // let potatoVader= new RepublicFighter();
 
 //EmpireFighter Instance
 var captainPlanet = new _empireJs2['default']();
+captainPlanet.health = _underscore2['default'].random(100, 130);
 // let nemoFish = new EmpireFighter();
 // let johnnyBravo = new EmpireFighter();
 // let barneyStinson = new EmpireFighter();
@@ -89,6 +92,10 @@ repAtck1.on('click', function () {
 	} else {
 		empHealth.text(captainPlanet.health);
 	}
+
+	// Make animation
+
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/hug.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
 });
 
 repAtck2.on('click', function () {
@@ -102,6 +109,7 @@ repAtck2.on('click', function () {
 	} else {
 		empHealth.text(captainPlanet.health);
 	}
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/yoda.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
 });
 
 repAtck3.on('click', function () {
@@ -115,6 +123,8 @@ repAtck3.on('click', function () {
 	} else {
 		empHealth.text(captainPlanet.health);
 	}
+
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/fireball2.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
 });
 
 repAtck4.on('click', function () {
@@ -128,6 +138,8 @@ repAtck4.on('click', function () {
 	} else {
 		empHealth.text(captainPlanet.health);
 	}
+
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/yoda.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
 });
 
 // ------------------------------------------------------------------
@@ -143,6 +155,8 @@ empAtck1.on('click', function () {
 	} else {
 		repHealth.text(watMan.health);
 	}
+
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/grass.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
 });
 
 empAtck2.on('click', function () {
@@ -156,6 +170,8 @@ empAtck2.on('click', function () {
 	} else {
 		repHealth.text(watMan.health);
 	}
+
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/lightning.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
 });
 
 empAtck3.on('click', function () {
@@ -169,6 +185,8 @@ empAtck3.on('click', function () {
 	} else {
 		repHealth.text(watMan.health);
 	}
+
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/megaman.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
 });
 
 empAtck4.on('click', function () {
@@ -182,6 +200,12 @@ empAtck4.on('click', function () {
 	} else {
 		repHealth.text(watMan.health);
 	}
+
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/wario.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
+});
+
+(0, _jquery2['default'])('.playAgain').on('click', function () {
+	location.reload();
 });
 
 // Character Selection Process ----------------------------------------------------------------
@@ -329,14 +353,6 @@ empAtck4.on('click', function () {
 	(0, _jquery2['default'])('.battleScreen').fadeIn(1500);
 });
 
-// Attack Attributes need to populate the buttons when specific character is selected
-
-var abilities = function abilities() {};
-
-// when fight button is clicked then intro box fades out, and battle screen fades in
-
-// Fighting stuffs
-
 },{"./empire.js":1,"./republic.js":3,"jquery":4,"moment":5,"underscore":6}],3:[function(require,module,exports){
 // Constructor Function for all Fighters
 "use strict";
@@ -355,14 +371,6 @@ var RepublicFighter = function RepublicFighter(obj) {
 };
 
 exports["default"] = RepublicFighter;
-
-var watMan = function watMan() {
-	this.health = 200;
-};
-
-var potatoVader = function potatoVader() {
-	this.health = 100;
-};
 module.exports = exports["default"];
 
 },{}],4:[function(require,module,exports){

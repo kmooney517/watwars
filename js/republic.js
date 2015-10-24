@@ -12,11 +12,3 @@ let RepublicFighter = function(obj) {
 
 export default RepublicFighter;
 
-
-let watMan = function(){
-	this.health = 200;
-}
-
-let potatoVader = function() {
-	this.health = 100;
-}

@@ -2072,7 +2072,7 @@
   padding-top: 20px; }
 
 .mainScreen .fight {
-  margin: 10px 45%;
+  margin: 10px 40%;
   height: 50px;
   width: 200px; }
 
@@ -2090,15 +2090,23 @@
     margin-top: 0;
     margin-bottom: 5px; }
 
+.republicName {
+  color: #ECB523; }
+
+.empireName {
+  color: #ECB523;
+  text-align: right;
+  margin-right: 5px; }
+
 .playerOneHealth {
   border: 1px solid red;
   width: 20%;
   height: 50px;
   margin-left: 2%;
   margin-bottom: 10px; }
-  .playerOneHealth .healthBar {
+  .playerOneHealth .repHealthBar {
     margin-left: 5px;
-    height: 15px;
+    height: 20px;
     width: 95%;
     border: 1px solid red;
     background-color: green; }
@@ -2117,36 +2125,46 @@
   width: 20%;
   height: 50px;
   margin-bottom: 10px; }
-  .playerTwoHealth p {
-    margin-left: 70px; }
-  .playerTwoHealth .healthBar {
+  .playerTwoHealth .empHealthBar {
     margin-left: 5px;
-    height: 15px;
+    height: 20px;
     width: 95%;
     border: 1px solid red;
-    background-color: green; }
+    background-color: green;
+    text-align: right; }
 
 .leftSide {
   width: 25%;
   height: 500px;
   border: 1px solid red;
-  float: left; }
+  margin-left: 1%; }
   .leftSide .playerOne {
     width: 95%;
     height: 300px;
     border: 1px solid #ECB523;
     margin: 5px; }
 
+.arenaImage {
+  height: 300px;
+  width: 45%;
+  margin: 2% 1%; }
+
+.attackGifs {
+  height: 300px;
+  width: 100%; }
+
 .rightSide {
   width: 25%;
   height: 500px;
-  border: 1px solid red;
-  float: right; }
+  border: 1px solid red; }
   .rightSide .playerTwo {
     width: 95%;
     height: 300px;
     border: 1px solid #ECB523;
     margin: 5px; }
+
+.side {
+  display: inline-block; }
 
 .attackOptions {
   width: 95%;
@@ -2156,5 +2174,11 @@
   .attackOptions button {
     margin: 25px 10px;
     width: 120px; }
+
+.playAgain button {
+  margin-top: 100px;
+  margin-bottom: -30px;
+  border: none;
+  margin-left: 40%; }
 
 /*# sourceMappingURL=main.css.map */
