@@ -79,8 +79,6 @@ var empAtck4 = (0, _jquery2['default'])('.badAtck4');
 repHealth.text(watMan.health);
 empHealth.text(captainPlanet.health);
 
-//Making it actually turn based
-
 // Setting up the click events for the attacks
 
 repAtck1.on('click', function () {
@@ -95,6 +93,16 @@ repAtck1.on('click', function () {
 	} else {
 		empHealth.text(captainPlanet.health);
 	}
+
+	repAtck1.css('visibility', 'hidden');
+	repAtck2.css('visibility', 'hidden');
+	repAtck3.css('visibility', 'hidden');
+	repAtck4.css('visibility', 'hidden');
+
+	empAtck1.css('visibility', 'visible');
+	empAtck2.css('visibility', 'visible');
+	empAtck3.css('visibility', 'visible');
+	empAtck4.css('visibility', 'visible');
 
 	// Make animation
 
@@ -114,6 +122,16 @@ repAtck2.on('click', function () {
 		empHealth.text(captainPlanet.health);
 	}
 	(0, _jquery2['default'])('.attackGifs').html('<img src="images/yoda.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
+
+	repAtck1.css('visibility', 'hidden');
+	repAtck2.css('visibility', 'hidden');
+	repAtck3.css('visibility', 'hidden');
+	repAtck4.css('visibility', 'hidden');
+
+	empAtck1.css('visibility', 'visible');
+	empAtck2.css('visibility', 'visible');
+	empAtck3.css('visibility', 'visible');
+	empAtck4.css('visibility', 'visible');
 });
 
 repAtck3.on('click', function () {
@@ -130,6 +148,16 @@ repAtck3.on('click', function () {
 	}
 
 	(0, _jquery2['default'])('.attackGifs').html('<img src="images/fireball2.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
+
+	repAtck1.css('visibility', 'hidden');
+	repAtck2.css('visibility', 'hidden');
+	repAtck3.css('visibility', 'hidden');
+	repAtck4.css('visibility', 'hidden');
+
+	empAtck1.css('visibility', 'visible');
+	empAtck2.css('visibility', 'visible');
+	empAtck3.css('visibility', 'visible');
+	empAtck4.css('visibility', 'visible');
 });
 
 repAtck4.on('click', function () {
@@ -146,6 +174,16 @@ repAtck4.on('click', function () {
 	}
 
 	(0, _jquery2['default'])('.attackGifs').html('<img src="images/yoda.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
+
+	repAtck1.css('visibility', 'hidden');
+	repAtck2.css('visibility', 'hidden');
+	repAtck3.css('visibility', 'hidden');
+	repAtck4.css('visibility', 'hidden');
+
+	empAtck1.css('visibility', 'visible');
+	empAtck2.css('visibility', 'visible');
+	empAtck3.css('visibility', 'visible');
+	empAtck4.css('visibility', 'visible');
 });
 
 // ------------------------------------------------------------------
@@ -162,6 +200,16 @@ empAtck1.on('click', function () {
 	} else {
 		repHealth.text(watMan.health);
 	}
+
+	empAtck1.css('visibility', 'hidden');
+	empAtck2.css('visibility', 'hidden');
+	empAtck3.css('visibility', 'hidden');
+	empAtck4.css('visibility', 'hidden');
+
+	repAtck1.css('visibility', 'visible');
+	repAtck2.css('visibility', 'visible');
+	repAtck3.css('visibility', 'visible');
+	repAtck4.css('visibility', 'visible');
 
 	(0, _jquery2['default'])('.attackGifs').html('<img src="images/grass.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
 });
@@ -180,6 +228,16 @@ empAtck2.on('click', function () {
 	}
 
 	(0, _jquery2['default'])('.attackGifs').html('<img src="images/lightning.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
+
+	empAtck1.css('visibility', 'hidden');
+	empAtck2.css('visibility', 'hidden');
+	empAtck3.css('visibility', 'hidden');
+	empAtck4.css('visibility', 'hidden');
+
+	repAtck1.css('visibility', 'visible');
+	repAtck2.css('visibility', 'visible');
+	repAtck3.css('visibility', 'visible');
+	repAtck4.css('visibility', 'visible');
 });
 
 empAtck3.on('click', function () {
@@ -195,6 +253,16 @@ empAtck3.on('click', function () {
 	}
 
 	(0, _jquery2['default'])('.attackGifs').html('<img src="images/megaman.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
+
+	empAtck1.css('visibility', 'hidden');
+	empAtck2.css('visibility', 'hidden');
+	empAtck3.css('visibility', 'hidden');
+	empAtck4.css('visibility', 'hidden');
+
+	repAtck1.css('visibility', 'visible');
+	repAtck2.css('visibility', 'visible');
+	repAtck3.css('visibility', 'visible');
+	repAtck4.css('visibility', 'visible');
 });
 
 empAtck4.on('click', function () {
@@ -211,6 +279,16 @@ empAtck4.on('click', function () {
 	}
 
 	(0, _jquery2['default'])('.attackGifs').html('<img src="images/wario.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
+
+	empAtck1.css('visibility', 'hidden');
+	empAtck2.css('visibility', 'hidden');
+	empAtck3.css('visibility', 'hidden');
+	empAtck4.css('visibility', 'hidden');
+
+	repAtck1.css('visibility', 'visible');
+	repAtck2.css('visibility', 'visible');
+	repAtck3.css('visibility', 'visible');
+	repAtck4.css('visibility', 'visible');
 });
 
 (0, _jquery2['default'])('.playAgain').on('click', function () {
