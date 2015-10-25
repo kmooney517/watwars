@@ -60,6 +60,7 @@ repAtck1.on('click', function(){
 	if (captainPlanet.health <= 0) {
 		empHealth.text('Defeated!');
 		empHealth.css('color', 'red');
+		alert('Wat? Everyone knows the light will always prevail');
 	} else{
 		empHealth.text(captainPlanet.health);
 	}
@@ -89,6 +90,7 @@ repAtck2.on('click', function(){
 	if (captainPlanet.health <= 0) {
 		empHealth.text('Defeated!');
 		empHealth.css('color', 'red');
+		alert('Wat? Everyone knows the light will always prevail');
 	} else {
 		empHealth.text(captainPlanet.health);
 	}
@@ -114,6 +116,7 @@ repAtck3.on('click', function(){
 	if (captainPlanet.health <= 0) {
 		empHealth.text('Defeated!');
 		empHealth.css('color', 'red');
+		alert('Wat? Everyone knows the light will always prevail');
 	} else {
 		empHealth.text(captainPlanet.health);
 
@@ -141,11 +144,12 @@ repAtck4.on('click', function(){
 	if (captainPlanet.health <= 0) {
 		empHealth.text('Defeated!');
 		empHealth.css('color', 'red');
+		alert('Wat? Everyone knows the light will always prevail');
 	} else {
 		empHealth.text(captainPlanet.health);
 	}
 
-	$('.attackGifs').html('<img src="images/yoda.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
+	$('.attackGifs').html('<img src="images/grass.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
 
 	repAtck1.css('visibility', 'hidden');
 	repAtck2.css('visibility', 'hidden');
@@ -173,6 +177,7 @@ empAtck1.on('click', function(){
 	if (watMan.health <= 0) {
 		repHealth.text('Defeated!');
 		repHealth.css('color', 'red');
+		alert('Wat? Come to the dark side, young jedi');
 	} else {
 		repHealth.text(watMan.health);
 	}
@@ -201,6 +206,7 @@ empAtck2.on('click', function(){
 	if (watMan.health <= 0) {
 		repHealth.text('Defeated!');
 		repHealth.css('color', 'red');
+		alert('Wat? Come to the dark side, young jedi');
 	} else {
 		repHealth.text(watMan.health);
 
@@ -227,6 +233,7 @@ empAtck3.on('click', function(){
 	if (watMan.health <= 0) {
 		repHealth.text('Defeated!');
 		repHealth.css('color', 'red');
+		alert('Wat? Come to the dark side, young jedi');
 	} else {
 		repHealth.text(watMan.health);
 	}
@@ -253,6 +260,7 @@ empAtck4.on('click', function(){
 	if (watMan.health <= 0) {
 		repHealth.text('Defeated!');
 		repHealth.css('color', 'red');
+		alert('Wat? Come to the dark side, young jedi');
 	} else {
 		repHealth.text(watMan.health);
 	}
