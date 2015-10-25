@@ -79,6 +79,8 @@ var empAtck4 = (0, _jquery2['default'])('.badAtck4');
 repHealth.text(watMan.health);
 empHealth.text(captainPlanet.health);
 
+//Making it actually turn based
+
 // Setting up the click events for the attacks
 
 repAtck1.on('click', function () {
@@ -89,13 +91,14 @@ repAtck1.on('click', function () {
 
 	if (captainPlanet.health <= 0) {
 		empHealth.text('Defeated!');
+		empHealth.css('color', 'red');
 	} else {
 		empHealth.text(captainPlanet.health);
 	}
 
 	// Make animation
 
-	(0, _jquery2['default'])('.attackGifs').html('<img src="images/hug.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/hug.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
 });
 
 repAtck2.on('click', function () {
@@ -106,10 +109,11 @@ repAtck2.on('click', function () {
 
 	if (captainPlanet.health <= 0) {
 		empHealth.text('Defeated!');
+		empHealth.css('color', 'red');
 	} else {
 		empHealth.text(captainPlanet.health);
 	}
-	(0, _jquery2['default'])('.attackGifs').html('<img src="images/yoda.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/yoda.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
 });
 
 repAtck3.on('click', function () {
@@ -120,11 +124,12 @@ repAtck3.on('click', function () {
 
 	if (captainPlanet.health <= 0) {
 		empHealth.text('Defeated!');
+		empHealth.css('color', 'red');
 	} else {
 		empHealth.text(captainPlanet.health);
 	}
 
-	(0, _jquery2['default'])('.attackGifs').html('<img src="images/fireball2.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/fireball2.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
 });
 
 repAtck4.on('click', function () {
@@ -135,11 +140,12 @@ repAtck4.on('click', function () {
 
 	if (captainPlanet.health <= 0) {
 		empHealth.text('Defeated!');
+		empHealth.css('color', 'red');
 	} else {
 		empHealth.text(captainPlanet.health);
 	}
 
-	(0, _jquery2['default'])('.attackGifs').html('<img src="images/yoda.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/yoda.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
 });
 
 // ------------------------------------------------------------------
@@ -152,11 +158,12 @@ empAtck1.on('click', function () {
 
 	if (watMan.health <= 0) {
 		repHealth.text('Defeated!');
+		repHealth.css('color', 'red');
 	} else {
 		repHealth.text(watMan.health);
 	}
 
-	(0, _jquery2['default'])('.attackGifs').html('<img src="images/grass.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/grass.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
 });
 
 empAtck2.on('click', function () {
@@ -167,26 +174,27 @@ empAtck2.on('click', function () {
 
 	if (watMan.health <= 0) {
 		repHealth.text('Defeated!');
+		repHealth.css('color', 'red');
 	} else {
 		repHealth.text(watMan.health);
 	}
 
-	(0, _jquery2['default'])('.attackGifs').html('<img src="images/lightning.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/lightning.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
 });
 
 empAtck3.on('click', function () {
-
 	//Determining the hitpoints
 	var num = _underscore2['default'].random(0, 60);
 	watMan.hit(num);
 
 	if (watMan.health <= 0) {
 		repHealth.text('Defeated!');
+		repHealth.css('color', 'red');
 	} else {
 		repHealth.text(watMan.health);
 	}
 
-	(0, _jquery2['default'])('.attackGifs').html('<img src="images/megaman.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/megaman.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
 });
 
 empAtck4.on('click', function () {
@@ -197,11 +205,12 @@ empAtck4.on('click', function () {
 
 	if (watMan.health <= 0) {
 		repHealth.text('Defeated!');
+		repHealth.css('color', 'red');
 	} else {
 		repHealth.text(watMan.health);
 	}
 
-	(0, _jquery2['default'])('.attackGifs').html('<img src="images/wario.gif" width="100%" height="100%">').fadeIn(200).fadeOut(1000);
+	(0, _jquery2['default'])('.attackGifs').html('<img src="images/wario.gif" width="100%" height="100%">').fadeIn(400).fadeOut(1000);
 });
 
 (0, _jquery2['default'])('.playAgain').on('click', function () {
